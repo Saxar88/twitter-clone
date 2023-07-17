@@ -1,15 +1,23 @@
 .sidebar {
-	flex: 0.3;
-	min-width: 250px;
-	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	width: 275px;
 	padding: 0 20px;
 	border-right: 1px solid var(--twitter-background);
 }
 
 .sidebar__icon {
-	margin: 0 0 20px 20px;
+	margin: 3px 0 0 10px;
+	padding: 10px;
 	color: var(--twitter-color);
 	font-size: 30px !important;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+.sidebar__icon:hover {
+	background-color: var(--twitter-background);
+	transition: 150ms ease-in;
 }
 
 .sidebar__tweet {

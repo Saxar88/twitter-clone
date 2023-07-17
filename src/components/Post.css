@@ -1,21 +1,22 @@
 .post {
 	display: flex;
-	align-items: flex-start;
-	padding: 0 0 10px 10px;
+	margin-top: 12px;
+	padding: 0 16px;
 	border-bottom: 1px solid var(--twitter-background);
 }
 
 .post__avatar {
-	padding: 10px;
+	margin-right: 12px;
 }
 
 .post__body {
 	flex: 1;
-	padding: 15px;
+	padding: 0 0 12px;
 }
 
-.post__body > img {
+.post__tweet > img {
 	width: 100%;
+	margin-top: 12px;
 	border-radius: 20px;
 }
 
@@ -27,7 +28,7 @@
 .post__headerSpecial {
 	font-size: 15px;
 	font-weight: 600;
-	color: #536471;
+	color: var(--twitter-color-alt);
 }
 
 .post__badge {
@@ -42,6 +43,7 @@
 
 .post__footer {
 	display: flex;
-	justify-content: space-between;
+	gap: 40px;
 	margin-top: 10px;
+	color: var(--twitter-color-alt);
 }

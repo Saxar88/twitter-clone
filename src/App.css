@@ -1,12 +1,15 @@
 body {
 	--twitter-color: #1d9bf0;
+	--twitter-color-alt: #536471;
 	--twitter-background: #e6ecf0;
 }
 
 .App {
 	display: flex;
+	justify-content: center;
 	height: 100vh;
-	max-width: 1300px;
+	max-width: 100vw;
 	margin: 0 auto;
 	padding: 0 10px;
+	color: #0f1419;
 }

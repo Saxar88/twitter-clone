@@ -2,9 +2,10 @@ import React from 'react';
 import './Post.css';
 import { Avatar } from '@mui/material';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import PublishIcon from '@mui/icons-material/Publish';
 import RepeatIcon from '@mui/icons-material/Repeat';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import UploadIcon from '@mui/icons-material/Upload';
 import VerifiedIcon from '@mui/icons-material/Verified';
 
 function Post({ displayName, username, verified, text, image, avatar }) {
@@ -23,17 +24,17 @@ function Post({ displayName, username, verified, text, image, avatar }) {
 							</span>
 						</h3>
 					</div>
-					<div className='post__headerDescription'>
-						<p>True, have to admit trolls are kinda fun</p>
-					</div>
 				</div>
-				<img src='trolls.jpg' alt='' />
+				<div className='post__tweet'>
+					<p>True, have to admit trolls are kinda fun</p>
+					<img src='trolls.jpg' alt='' />
+				</div>
 				<div className='post__footer'>
-					<ChatBubbleOutlineIcon fontSize='small'>
-						<RepeatIcon fontSize='small' />
-						<FavoriteBorderIcon fontSize='small' />
-						<PublishIcon fontSize='small' />
-					</ChatBubbleOutlineIcon>
+					<ChatBubbleOutlineIcon fontSize='small' />
+					<RepeatIcon fontSize='small' />
+					<FavoriteBorderIcon fontSize='small' />
+					<BarChartIcon fontSize='small' />
+					<UploadIcon fontSize='small' />
 				</div>
 			</div>
 		</div>
