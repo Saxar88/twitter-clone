@@ -17,6 +17,11 @@ function Widgets() {
 					title='Telegram'
 					tweets='488k'
 				/>
+				<Trend
+					category='Politics · Trending'
+					title='#ClimateScam'
+					tweets='28.8k'
+				/>
 				<Trend category='Politics · Trending' title='Crimea' tweets='14.6k' />
 				<p>Show more</p>
 			</div>

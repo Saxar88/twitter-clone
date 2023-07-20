@@ -8,26 +8,27 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import UploadIcon from '@mui/icons-material/Upload';
 import VerifiedIcon from '@mui/icons-material/Verified';
 
-function Post({ displayName, username, verified, text, image, avatar }) {
+function Post({ displayName, username, verified, avatar, text, image }) {
 	return (
 		<div className='post'>
 			<div className='post__avatar'>
-				<Avatar src='/avatar.jpg' alt='Elon Musk' />
+				<Avatar src={avatar} alt={displayName} />
 			</div>
 			<div className='post__body'>
 				<div className='post__header'>
 					<div className='post__headerText'>
 						<h3>
-							Elon Musk
+							{displayName}
 							<span className='post__headerSpecial'>
-								<VerifiedIcon className='post__badge' /> @elonmusk
+								{verified && <VerifiedIcon className='post__badge' />} @
+								{username}
 							</span>
 						</h3>
 					</div>
 				</div>
 				<div className='post__tweet'>
-					<p>True, have to admit trolls are kinda fun</p>
-					<img src='trolls.jpg' alt='' />
+					<p>{text}</p>
+					<img src={image} alt='' />
 				</div>
 				<div className='post__footer'>
 					<ChatBubbleOutlineIcon fontSize='small' />
