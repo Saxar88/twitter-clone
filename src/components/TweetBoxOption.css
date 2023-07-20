@@ -1,0 +1,30 @@
+.tweetBoxOption {
+	display: flex;
+	flex-direction: column;
+}
+
+.tweetBoxOption__icon {
+	padding: 5px 5px 1px 5px;
+	color: var(--twitter-color);
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+.tweetBoxOption__icon:hover {
+	background-color: #e8f5fd;
+	transition: all 0.1s ease-in;
+}
+
+.tweetBoxOption__tag {
+	position: absolute;
+	display: flex;
+	align-self: center;
+	justify-self: flex-end;
+	margin-top: 32px;
+	background-color: #000;
+	opacity: 60%;
+	color: #fbfbfb;
+	font-size: 12px;
+	padding: 3px;
+	border-radius: 2px;
+}

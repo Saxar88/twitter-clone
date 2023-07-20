@@ -3,7 +3,7 @@ import './Feed.css';
 import TweetBox from './TweetBox';
 import Post from './Post';
 import db from '../firebase';
-import { doc, collection, query, where, onSnapshot } from 'firebase/firestore';
+import { collection, onSnapshot } from 'firebase/firestore';
 
 function Feed() {
 	const [posts, setPosts] = useState([]);

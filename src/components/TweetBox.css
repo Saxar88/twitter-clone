@@ -35,25 +35,13 @@
 }
 
 .tweetBox__inputOptions {
+	display: flex;
 	margin: 12px 0 0 75px;
-}
-
-.tweetBox__inputOptions > * {
-	padding: 5px;
-	font-size: 20px !important;
-	color: var(--twitter-color);
-	border-radius: 30px;
-	cursor: pointer;
-}
-
-.tweetBox__inputOptions > *:hover {
-	background-color: #e8f5fd;
 }
 
 .tweetBox__tweetButton {
 	height: 40px !important;
 	width: 80px !important;
-	/* margin-top: 12px !important; */
 	margin-left: auto !important;
 	background-color: var(--twitter-color) !important;
 	color: white !important;
