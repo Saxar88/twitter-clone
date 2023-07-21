@@ -13,20 +13,24 @@
 	padding: 20px;
 }
 
-.tweetBox__input > input {
+.tweetBox__inputFields {
+	display: flex;
+	flex-direction: column;
+}
+
+.tweetBox__inputFields > input {
 	flex: 1;
 	margin-left: 15px;
 	font-size: 18px;
 	border: none;
 }
 
-.tweetBox__input > input:focus {
+.tweetBox__inputFields > input:focus {
 	outline: none;
 }
 
 .tweetBox__imageInput {
-	padding: 10px;
-	border: none;
+	display: none;
 }
 
 .tweetBox__inputButtons {
@@ -39,6 +43,11 @@
 	margin: 12px 0 0 75px;
 }
 
+.tweetBox__inputOptions > button {
+	background-color: #fff;
+	border: none;
+}
+
 .tweetBox__tweetButton {
 	height: 40px !important;
 	width: 80px !important;
@@ -49,4 +58,5 @@
 	font-weight: 900 !important;
 	border: none !important;
 	border-radius: 30px !important;
+	cursor: pointer !important;
 }

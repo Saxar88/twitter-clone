@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './TweetBox.css';
 import db from '../firebase';
 import { Avatar, Button } from '@mui/material';
@@ -9,15 +9,17 @@ import SentimentSatisfiedIcon from '@mui/icons-material/SentimentSatisfied';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import PlaceIcon from '@mui/icons-material/Place';
 import TweetBoxOption from './TweetBoxOption';
+import { collection, addDoc } from 'firebase/firestore';
 
 function TweetBox() {
 	const [tweetMessage, setTweetMessage] = useState('');
-	const [tweetImage, setTweetImage] = useState('');
+	const [tweetImage, setTweetImage] = useState([]);
+	const inputFile = useRef(null);
 
 	const sendTweet = (e) => {
 		e.preventDefault();
 
-		db.collection('posts').add({
+		addDoc(collection(db, 'posts'), {
 			avatar: '/avatar.jpg',
 			displayName: 'Elon Musk',
 			username: 'elonmusk',
@@ -27,7 +29,7 @@ function TweetBox() {
 		});
 
 		setTweetMessage('');
-		setTweetImage('');
+		setTweetImage([]);
 	};
 
 	return (
@@ -35,19 +37,31 @@ function TweetBox() {
 			<form>
 				<div className='tweetBox__input'>
 					<Avatar src='avatar.jpg' alt='Elon Musk' />
-					<input
-						type='text'
-						placeholder='What is happening?!'
-						value={tweetMessage}
-						onChange={(e) => setTweetMessage(e.target.value)}
-					/>
+					<div className='tweetBox__inputFields'>
+						<input
+							type='text'
+							placeholder='What is happening?!'
+							value={tweetMessage}
+							onChange={(e) => setTweetMessage(e.target.value)}
+						/>
+						<input
+							type='file'
+							value={tweetImage}
+							className='tweetBox__imageInput'
+							ref={inputFile}
+							onChange={(e) => setTweetImage(e.target.value)}
+						/>
+					</div>
 				</div>
 				<div className='tweetBox__inputButtons'>
 					<div className='tweetBox__inputOptions'>
-						<TweetBoxOption
-							icon={<InsertPhotoIcon fontSize='small' />}
-							label='Media'
-						/>
+						<button onClick={() => inputFile.current.click()}>
+							<TweetBoxOption
+								icon={<InsertPhotoIcon fontSize='small' />}
+								label='Media'
+							/>
+						</button>
+
 						<TweetBoxOption
 							icon={<GifBoxIcon fontSize='small' />}
 							label='GIF'
