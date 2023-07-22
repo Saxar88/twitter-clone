@@ -6,6 +6,8 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
+import { doc, deleteDoc } from 'firebase/firestore';
+import db from '../firebase';
 
 function TweetMenu() {
 	const dropdownRef = useRef(null);
@@ -16,6 +18,10 @@ function TweetMenu() {
 	};
 
 	useOnClickOutside(dropdownRef, closeMenu);
+
+	const deleteTweet = async (postId) => {
+		await deleteDoc(doc(db, 'posts', postId));
+	};
 
 	return (
 		<div>
@@ -28,7 +34,11 @@ function TweetMenu() {
 			{isMenuDropDownOpen && (
 				<div className='tweetMenu'>
 					<div className='red'>
-						<TweetMenuOption Icon={DeleteOutlineIcon} text='Delete' />
+						<TweetMenuOption
+							Icon={DeleteOutlineIcon}
+							text='Delete'
+							onClick={deleteTweet}
+						/>
 					</div>
 					<TweetMenuOption Icon={BarChartIcon} text='View Tweet analytics' />
 					<TweetMenuOption
