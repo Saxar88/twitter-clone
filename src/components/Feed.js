@@ -4,12 +4,13 @@ import TweetBox from './TweetBox';
 import Post from './Post';
 import db from '../firebase';
 import { collection, onSnapshot } from 'firebase/firestore';
+import FlipMove from 'react-flip-move';
 
 function Feed() {
 	const [posts, setPosts] = useState([]);
 
 	useEffect(() => {
-		const unsubscribe = onSnapshot(collection(db, 'posts'), (querySnapshot) => {
+		onSnapshot(collection(db, 'posts'), (querySnapshot) => {
 			const postsData = querySnapshot.docs.map((doc) => doc.data());
 			setPosts(postsData);
 		});
@@ -22,17 +23,19 @@ function Feed() {
 			</div>
 			<TweetBox />
 
-			{posts.map((post, i) => (
-				<Post
-					key={i}
-					displayName={post.displayName}
-					username={post.username}
-					verified={post.verified}
-					avatar={post.avatar}
-					text={post.text}
-					image={post.image}
-				/>
-			))}
+			<FlipMove>
+				{posts.map((post, i) => (
+					<Post
+						key={i}
+						displayName={post.displayName}
+						username={post.username}
+						verified={post.verified}
+						avatar={post.avatar}
+						text={post.text}
+						image={post.image}
+					/>
+				))}
+			</FlipMove>
 		</div>
 	);
 }

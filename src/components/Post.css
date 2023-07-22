@@ -14,10 +14,9 @@
 	padding: 0 0 12px;
 }
 
-.post__tweet > img {
-	width: 100%;
-	margin-top: 12px;
-	border-radius: 20px;
+.post__header {
+	display: flex;
+	justify-content: space-between;
 }
 
 .post__headerText > h3 {
@@ -37,8 +36,10 @@
 	color: var(--twitter-color);
 }
 
-.post__headerDescription {
-	margin-bottom: 10px;
+.post__tweet > img {
+	width: 100%;
+	margin-top: 12px;
+	border-radius: 20px;
 }
 
 .post__footer {

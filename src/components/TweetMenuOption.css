@@ -1,0 +1,14 @@
+.tweetMenu__option {
+	display: flex;
+	padding: 12px 16px;
+	cursor: pointer;
+}
+
+.tweetMenu__option:hover {
+	background-color: #f7f7f7;
+	transition: 150ms ease-in;
+}
+
+.tweetMenu__option > p {
+	padding-left: 12px;
+}
