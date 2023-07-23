@@ -26,6 +26,10 @@ function TweetBox() {
 			verified: true,
 			text: tweetMessage,
 			image: tweetImage,
+			replies: '0',
+			retweets: '0',
+			likes: '0',
+			views: '0',
 		});
 
 		setTweetMessage('');
@@ -36,7 +40,7 @@ function TweetBox() {
 		<div className='tweetBox'>
 			<form>
 				<div className='tweetBox__input'>
-					<Avatar src='avatar.jpg' alt='Elon Musk' />
+					<Avatar src='elonmusk-pfp.jpg' alt='Elon Musk' />
 					<div className='tweetBox__inputFields'>
 						<input
 							type='text'

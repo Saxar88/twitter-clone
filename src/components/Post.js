@@ -10,7 +10,18 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 import TweetMenu from './TweetMenu';
 import PostOption from './PostOption';
 
-function Post({ displayName, username, verified, avatar, text, image }) {
+function Post({
+	displayName,
+	username,
+	verified,
+	avatar,
+	text,
+	image,
+	replies,
+	retweets,
+	likes,
+	views,
+}) {
 	return (
 		<div className='post'>
 			<div className='post__avatar'>
@@ -38,28 +49,28 @@ function Post({ displayName, username, verified, avatar, text, image }) {
 						<PostOption
 							icon={<ChatBubbleOutlineIcon fontSize='small' />}
 							label='Reply'
-							text='4,037'
+							text={replies}
 						/>
 					</div>
 					<div className='post__footerOption' id='retweet'>
 						<PostOption
 							icon={<RepeatIcon fontSize='small' />}
 							label='Retweet'
-							text='14.8K'
+							text={retweets}
 						/>
 					</div>
 					<div className='post__footerOption' id='like'>
 						<PostOption
 							icon={<FavoriteBorderIcon fontSize='small' />}
 							label='Like'
-							text='70.3K'
+							text={likes}
 						/>
 					</div>
 					<div className='post__footerOption'>
 						<PostOption
 							icon={<BarChartIcon fontSize='small' />}
 							label='View'
-							text='7.4M'
+							text={views}
 						/>
 					</div>
 					<div className='post__footerOption'>

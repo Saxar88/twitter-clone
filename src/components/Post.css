@@ -26,7 +26,7 @@
 
 .post__headerSpecial {
 	font-size: 15px;
-	font-weight: 600;
+	font-weight: normal;
 	color: var(--twitter-color-alt);
 }
 

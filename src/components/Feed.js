@@ -34,6 +34,10 @@ function Feed() {
 					avatar={post.avatar}
 					text={post.text}
 					image={post.image}
+					replies={post.replies}
+					retweets={post.retweets}
+					likes={post.likes}
+					views={post.views}
 				/>
 			))}
 		</div>
