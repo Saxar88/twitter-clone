@@ -46,5 +46,42 @@
 	display: flex;
 	gap: 40px;
 	margin-top: 10px;
-	color: var(--twitter-color-alt);
+}
+
+.post__footerOption {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.post__footerOption:hover * {
+	color: var(--twitter-color);
+	transition: all 0.15s ease-in;
+}
+
+.post__footerOption:hover
+	> .postOption__container
+	> .postOption
+	> .postOption__icon {
+	background-color: #e1eef6;
+}
+
+#retweet:hover * {
+	color: #00ba7c;
+	transition: all 0.15s ease-in;
+}
+
+#retweet:hover > .postOption__container > .postOption > .postOption__icon {
+	background-color: #def1eb;
+	transition: all 0.15s ease-in;
+}
+
+#like:hover * {
+	color: #f91880;
+	transition: all 0.15s ease-in;
+}
+
+#like:hover > .postOption__container > .postOption > .postOption__icon {
+	background-color: #f7e0eb;
+	transition: all 0.15s ease-in;
 }

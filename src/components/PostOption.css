@@ -1,0 +1,36 @@
+.postOption__container {
+	display: flex;
+	flex-direction: column;
+	margin: -8px;
+}
+
+.postOption {
+	display: flex;
+	align-items: center;
+}
+
+.postOption__icon {
+	padding: 5px 5px 1px 5px;
+	color: var(--twitter-color-alt);
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+.postOption > p {
+	padding: 0 12px;
+	font-size: 15px;
+	color: #536471;
+}
+
+.postOption__tag {
+	position: absolute;
+	display: flex;
+	align-self: center;
+	margin-top: 32px;
+	background-color: #000;
+	opacity: 60%;
+	color: #fbfbfb !important;
+	font-size: 12px;
+	padding: 3px;
+	border-radius: 2px;
+}
