@@ -9,12 +9,14 @@ import UploadIcon from '@mui/icons-material/Upload';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import TweetMenu from './TweetMenu';
 import PostOption from './PostOption';
+import Moment from 'react-moment';
 
 function Post({
 	displayName,
 	username,
 	verified,
 	avatar,
+	createdAt,
 	text,
 	image,
 	replies,
@@ -34,7 +36,7 @@ function Post({
 							{displayName}
 							<span className='post__headerSpecial'>
 								{verified && <VerifiedIcon className='post__badge' />} @
-								{username}
+								{username} · <Moment toNow>{createdAt}</Moment>
 							</span>
 						</h3>
 					</div>

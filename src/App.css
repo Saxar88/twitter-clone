@@ -12,6 +12,7 @@ body {
 	margin: 0 auto;
 	padding: 0 10px;
 	color: #0f1419;
+	font-size: 15px;
 	overflow-y: scroll;
 	-ms-overflow-style: none;
 	scrollbar-width: none;

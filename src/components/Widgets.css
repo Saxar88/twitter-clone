@@ -43,7 +43,6 @@
 
 .widgets__widgetContainer > p {
 	padding: 16px;
-	font-size: 15px;
 	color: var(--twitter-color);
 	cursor: pointer;
 }

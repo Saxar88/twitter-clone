@@ -9,7 +9,7 @@ import SentimentSatisfiedIcon from '@mui/icons-material/SentimentSatisfied';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import PlaceIcon from '@mui/icons-material/Place';
 import TweetBoxOption from './TweetBoxOption';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 function TweetBox() {
 	const [tweetMessage, setTweetMessage] = useState('');
@@ -20,10 +20,11 @@ function TweetBox() {
 		e.preventDefault();
 
 		addDoc(collection(db, 'posts'), {
-			avatar: '/avatar.jpg',
+			avatar: '/elonmusk-pfp.jpg',
 			displayName: 'Elon Musk',
 			username: 'elonmusk',
 			verified: true,
+			createdAt: serverTimestamp(),
 			text: tweetMessage,
 			image: tweetImage,
 			replies: '0',

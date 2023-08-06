@@ -32,6 +32,7 @@ function Feed() {
 					username={post.username}
 					verified={post.verified}
 					avatar={post.avatar}
+					createdAt={post.createdAt}
 					text={post.text}
 					image={post.image}
 					replies={post.replies}
