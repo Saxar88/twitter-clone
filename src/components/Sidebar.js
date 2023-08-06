@@ -11,6 +11,7 @@ import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import CreateIcon from '@mui/icons-material/Create';
 import { Button } from '@mui/material';
 
 function Sidebar() {
@@ -26,6 +27,9 @@ function Sidebar() {
 			<SidebarOption Icon={VerifiedIcon} text='Verified' />
 			<SidebarOption Icon={PermIdentityIcon} text='Profile' />
 			<SidebarOption Icon={MoreHorizIcon} text='More' />
+			<Button variant='outlined' className='sidebar__tweetSmall' fullWidth>
+				<CreateIcon />
+			</Button>
 			<Button variant='outlined' className='sidebar__tweet' fullWidth>
 				Tweet
 			</Button>

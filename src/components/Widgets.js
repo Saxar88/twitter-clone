@@ -24,6 +24,7 @@ function Widgets() {
 					tweets='28.8k'
 				/>
 				<Trend category='Politics · Trending' title='Crimea' tweets='14.6k' />
+				<Trend category='Trending' title='Epstein Island' tweets='10.1k' />
 				<p>Show more</p>
 			</div>
 		</div>

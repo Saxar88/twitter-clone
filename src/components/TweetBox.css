@@ -58,5 +58,8 @@
 	font-weight: 900 !important;
 	border: none !important;
 	border-radius: 30px !important;
-	cursor: pointer !important;
+}
+
+.tweetBox__tweetButton:disabled {
+	opacity: 50%;
 }
